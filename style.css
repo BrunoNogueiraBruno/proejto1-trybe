@@ -1,0 +1,331 @@
+body {
+  background-color: rgb(253 , 251 , 251);
+  margin: 0;
+}
+
+/* Home_animation */
+.home_animation {
+  position: relative;
+  top: 13vh;
+  background-image: url('/rhodes.jpg');
+  background-size: 145%;
+  background-position: center;
+  height: 87vh;
+  z-index: 2;
+  text-align: center;
+}
+
+.box {
+  display: inline-block;
+  height: 100%;
+  width: 30%;
+}
+
+.colosso {
+  z-index: 100;
+  display: none;
+  opacity: 0;
+  position: relative;
+  color: yellow;
+  font-size: 80px;
+  font-family: Alegreya SC, serif;
+}
+
+.home_animation svg {
+  width: 100%;
+  height: 100%;
+}
+
+.construction-line {
+  text-align: left;
+  position: absolute;
+  font-size: 1.8em;
+  left: 25%;
+  top: 22%;
+  font-family: monospace;
+  color: white;
+}
+
+.destruction-line {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  font-size: 3em;
+  top: 50%;
+  left: 25%;
+  font-family: Permanent Marker, cursive;
+}
+
+/* Cabeçalho */
+header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 13vh;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+nav {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+}
+
+/* Minha-Foto */
+.informations {
+  height: 55vh;
+  background-color: wheat;
+  text-align: center;
+}
+
+.arraste {
+  position: relative;
+  top: 75%;
+  left: 7.5%;
+  font-family: monospace;
+  font-weight: 100;
+  color: black;
+  font-size: 1.5em;
+}
+
+.perfil {
+  top: -2vh;
+  position: relative;
+  left: -1%;
+  margin: auto;
+  display: inline-block;
+  padding: 30px;
+  text-align: center;
+  width: 50%;
+}
+
+.div_foto {
+  position: relative;
+  margin: auto;
+  height: 13rem;
+  width: 10rem;
+}
+
+.informations:hover > .perfil > .div_foto {
+  animation: arrastar-foto 1s forwards;
+}
+
+@keyframes arrastar-foto {
+
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+.moldura {
+  filter: saturate(0.8);
+  position: relative;
+  top: -90%;
+  z-index: 2;
+  height: 120%;
+  width: 120%;
+}
+
+
+#minha_foto {
+  filter: saturate(0.8);
+  position: relative;
+  top: 22%;
+  left: 8%;
+  border-radius: 50%;
+  height: 80%;
+  width: 95%;
+  opacity: 0;
+}
+
+.perfil:hover > .div_foto > #minha_foto {
+  animation: foto-perfil 1s forwards;
+}
+
+@keyframes foto-perfil {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.perfil:hover > span {
+  animation: arrastar-nome 1s forwards;
+}
+
+.perfil h2 {
+  font-size: 0.9em;
+  width: 90%;
+  z-index: 0;
+  position: relative;
+  left: -45%;
+  margin: auto;
+  font-family: Permanent Marker, cursive;
+  color: red;
+  opacity: 0;
+}
+
+.perfil:hover > span > h2 {
+  animation: arrastar-nome 1s forwards;
+}
+
+.perfil .perfil-nome {
+  font-size: 2em;
+  width: 50%;
+  z-index: 0;
+  position: relative;
+  left: 7rem;
+  top: -6rem;
+  margin: auto;
+  font-family: monospace;
+  opacity: 0;
+}
+
+@keyframes arrastar-nome {
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(50%);
+  }
+}
+
+.icon-github {
+  position: relative;
+  height: 50px;
+  top: 8px;
+  margin-right: 1vw;
+}
+
+/* Lições */
+#licoes {
+  line-height: 1.15em;
+  position: relative;
+  top: -9vh;
+  height: 24.25rem;
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+}
+
+#licoes_aprendidas {
+  display: inline-block;
+  border-right: 3px solid black;
+  padding: 20px;
+}
+
+#licoes_a_aprender {
+  display: inline-block;
+}
+
+#licoes span {
+  font-size: 1.7em;
+  z-index: 0;
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  transform: rotate(-8deg);
+  margin: auto;
+  font-family: Permanent Marker, cursive;
+  color: red;
+}
+
+#licoes span:hover {
+  color: black;
+}
+
+/* Container */
+#container {
+  height: 50vh;
+  padding: 20vh;
+}
+
+/* Artigo */
+article {
+  float: left;
+  text-align: justify;
+  display: inline-block;
+  width: 55%;
+}
+
+article img {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  width: 20%;
+  height: 10rem;
+}
+
+.article-text-aside {
+  position: relative;
+  top: -4.5vh;
+  display: inline-block;
+  width: 69%;
+}
+
+.author-quote {
+  font-style: italic;
+}
+
+/* Passagem */
+aside {
+  float: left;
+  text-align: justify;
+  width: 45%;
+}
+
+aside h3 {
+  font-style: italic;
+  margin-bottom: -10px;
+}
+
+#container table {
+  position: relative;
+  margin: auto;
+  top: 5vh;
+  width: 60%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#container table th {
+  background-color: wheat;
+}
+
+/* Rodapé */
+footer {
+  padding: 15px;
+  background-color: rgb(12 , 12 , 12);
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}

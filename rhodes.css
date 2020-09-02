@@ -1,0 +1,87 @@
+/* Estátua */
+
+/* Lado Esquerdo */
+.home_animation:hover > .destruction-line {
+  animation: text 10s forwards;
+}
+
+.home_animation:hover > svg > .cai-primeiro {
+  animation: caindo 3s forwards;
+}
+
+.home_animation:hover > svg > .cai-segundo {
+  animation: caindo 5s forwards;
+}
+
+.home_animation:hover > svg > .cai-terceiro {
+  animation: caindo 7s forwards;
+}
+
+.home_animation:hover > svg > .cai-quarto {
+  animation: caindo 10s forwards;
+}
+
+.home_animation:hover > svg > .cai-quinto {
+  animation: caindo 12s forwards;
+}
+
+/* Cabeça */
+.pelvis {
+  fill: white;
+  stroke: rgb(102 , 102 , 102);
+}
+
+.rosto {
+  stroke: rgb(102 , 102 , 102);
+}
+
+.olho-esq {
+  fill: rgb(102 , 102 , 102);
+}
+
+.cabelo {
+  stroke: rgb(102 , 102 , 102);
+  fill: white;
+}
+
+.olho-dir {
+  fill: rgb(102 , 102 , 102);
+}
+
+.base {
+  position: relative;
+  z-index: 100;
+  fill: rgb(150 , 150 , 150);
+  stroke: 2px rgb(66 , 66 , 66);
+}
+
+.stroke-rosto {
+  stroke: rgb(102 , 102 , 102);
+}
+
+@keyframes caindo {
+
+  100% {
+    transform: translateY(80%);
+    fill: rgb(114 , 114 , 114);
+  }
+}
+
+.home_animation:hover > .colosso {
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  display: inline;
+  animation: text 3s forwards;
+}
+
+@keyframes text {
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
